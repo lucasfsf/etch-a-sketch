@@ -1,4 +1,4 @@
-const gridSize = 16;
+const gridSize = 16 * 16;
 
 // Get reference to container
 const container = document.getElementById('container');
