@@ -17,8 +17,6 @@ body {
 
 .square {
     border: 1px solid darkgray;
-    height: calc(800px/16);
-    width: calc(800px/16);
 }
 
 .square-colored {
