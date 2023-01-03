@@ -1,10 +1,12 @@
-const gridSize = 16 * 16;
+let gridSize = 16;
 
 // Get reference to container
 const container = document.getElementById('container');
+container.style.gridTemplateColumns = `repeat(${gridSize}, calc(800px/${gridSize}) [col-start])`;
+container.style.gridTemplateRows = `repeat(${gridSize}, calc(800px/${gridSize}) [col-start])`;
 
 
-for (let i = 0; i < gridSize; i++) {
+for (let i = 0; i < (gridSize*gridSize); i++) {
     // Create single square
     let square = document.createElement('div');
     square.classList.add('square');
