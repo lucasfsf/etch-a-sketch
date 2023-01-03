@@ -19,6 +19,6 @@ body {
     width: calc(800px/16);
 }
 
-.square:hover {
+.square-colored {
     background-color: black;
 }
