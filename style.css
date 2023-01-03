@@ -9,14 +9,16 @@ body {
 
 #container {
     display: grid;
-    grid-template-columns: repeat(16, 20px [col-start]);
-    grid-template-rows: repeat(16, 20px [row-start]);
+    height: 800px;
+    width: 800px;
+    grid-template-columns: repeat(16, calc(800px/16) [col-start]);
+    grid-template-rows: repeat(16, calc(800px/16) [row-start]);
 }
 
 .square {
     border: 1px solid darkgray;
-    height: 18px;
-    width: 18px;
+    height: calc(800px/16);
+    width: calc(800px/16);
 }
 
 .square:hover {
