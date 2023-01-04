@@ -19,13 +19,17 @@ function createGrid(gridSize) {
     }
 }
 
-createGrid(defaultGridSize);
-
-//get all squares
-let squares = document.querySelectorAll('.square');
-squares.forEach(square => square.addEventListener('mouseover', colorSquare));
+function startSketcher() {
+    //get all squares
+    let squares = document.querySelectorAll('.square');
+    squares.forEach(square => square.addEventListener('mouseover', colorSquare));
+}
 
 function colorSquare(e) {
     this.classList.add('square-colored');
 }
+createGrid(defaultGridSize);
+startSketcher();
+
+
 
