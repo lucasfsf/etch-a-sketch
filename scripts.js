@@ -31,5 +31,16 @@ function colorSquare(e) {
 createGrid(defaultGridSize);
 startSketcher();
 
+createGridButton = document.getElementById('create-grid');
+console.log(createGridButton)
+createGridButton.addEventListener('click', () => {
+    // Clear previous grid
+    container.textContent = '';
+    // Prompt and creates new grid
+    let newGridSize = parseInt(prompt('What size should the sketch be?'));
+    createGrid(newGridSize);
+    startSketcher();
+});
+
 
 
