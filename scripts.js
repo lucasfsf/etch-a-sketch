@@ -37,10 +37,19 @@ createGridButton.addEventListener('click', () => {
     // Clear previous grid
     container.textContent = '';
     // Prompt and creates new grid
-    let newGridSize = parseInt(prompt('What size should the sketch be?'));
+    let newGridSize = newGridSizeHandler();
     createGrid(newGridSize);
     startSketcher();
 });
+
+function newGridSizeHandler() {
+    let userInput = NaN;
+    console.log(userInput);
+    while (isNaN(userInput) || userInput < 2 || userInput > 100) {
+        userInput = parseInt(prompt('What size should the sketch be?(2 - 100)'));
+    }
+    return userInput;
+}
 
 
 
